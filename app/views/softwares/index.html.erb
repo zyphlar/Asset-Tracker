@@ -1,0 +1,49 @@
+<ul>
+  <li>
+    <a href="/assets/">Assets</a>
+  </li>
+  <li>
+    <a href="/softwares/">Softwares</a>
+  </li>
+  <li>
+    <a href="/users/logout/">Logout</a>
+  </li>
+</ul>
+<br />
+<%= link_to 'New software', new_software_path %>
+
+<h1>Listing softwares</h1>
+
+<table class="assettable">
+  <tr>
+    <%= @sortable.header_link('company', 'Company') %>
+    <%= @sortable.header_link('version', 'Version') %>
+    <%= @sortable.header_link('key', 'Product Key') %>
+    <%= @sortable.header_link('platform', 'Platform') %>
+    <%= @sortable.header_link('media_location', 'Media Locaion') %>
+    <%= @sortable.header_link('asset_id', 'Asset') %>
+    <%= @sortable.header_link('installed', 'Installed') %>
+    <%= @sortable.header_link('installed_by', 'Installed By') %>
+    <%= @sortable.header_link('modified_by', 'Modified by') %>
+    <%= @sortable.header_link('note', 'Note') %>
+  </tr>
+
+<% for software in @softwares %>
+  <tr class="<%= cycle('oddrow', 'evenrow') %>">
+    <td class="smallcolumntag"><%= software.company %></td>
+    <td class="smallcolumn"><%= software.version %></td>
+    <td class="importantcolumn"><%= software.key %></td>
+    <td class="smallercolumn"><%= software.platform %></td>
+    <td class="smallcolumn"><%= software.media_location %></td>
+    <td class="smallcolumn"><%= software.asset.tag_with_name if !software.asset.blank?%></td>
+    <td class="smallercolumn"><%= software.installed %></td>
+    <td class="smallcolumn"><%= software.installed_by %></td>
+    <td class="smallcolumn"><%= software.modified_by %></td>
+    <td class="mediumcolumn"><%= software.note %></td>
+
+    <td class="sed"><%= link_to 'Show', software %></td>
+    <td class="sed"><%= link_to 'Edit', edit_software_path(software) %></td>
+    <td class="sed"><%= link_to 'Destroy', software, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

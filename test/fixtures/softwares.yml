@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  key: MyString
+  asset_id: 
+  installed: 2010-08-20
+  installed_by: MyString
+  modified: 2010-08-20
+  modified_by: MyString
+  note: MyString
+
+two:
+  name: MyString
+  key: MyString
+  asset_id: 
+  installed: 2010-08-20
+  installed_by: MyString
+  modified: 2010-08-20
+  modified_by: MyString
+  note: MyString

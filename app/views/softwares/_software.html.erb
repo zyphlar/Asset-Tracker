@@ -1,0 +1,14 @@
+  <tr>
+    <td><%= h(software.company) %></td>
+    <td><%= h(software.version) %></td>
+    <td><%= h(software.key) %></td>
+    <td><%= h(software.platform) %></td>
+    <td><%= h(software.media_location) %></td>
+    <td><%= h(software.installed) %></td>
+    <td><%= h(software.installed_by) %></td>
+    <td><%= h(software.modified_by) %></td>
+    <td><%= h(software.note) %></td>
+
+    <td><%= link_to 'Show', software %></td>
+    <td><%= link_to 'Edit', edit_software_path(@software) %></td>
+  </tr>

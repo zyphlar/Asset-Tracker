@@ -1,0 +1,57 @@
+<h1>Editing asset</h1>
+
+<% form_for(@asset) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </p>
+  <p>
+    <%= f.label :name, "Network Name" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :make %><br />
+    <%= f.text_field :make %>
+  </p>
+  <p>
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.label :serial %><br />
+    <%= f.text_field :serial %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+
+  <p>
+    <%= f.label :warranty, "Warranty Expires" %><br />
+    <%= f.date_select :warranty %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :assigned, "Assigned To" %><br />
+    <%= f.text_field :assigned %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :updated %><br />
+    <%= f.date_select :updated %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @asset %> |
+<%= link_to 'Back', assets_path %>

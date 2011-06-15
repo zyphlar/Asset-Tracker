@@ -1,0 +1,55 @@
+<p>
+  <b>Company:</b>
+  <%= @software.company %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @software.version %>
+</p>
+
+<p>
+  <b>Product Key:</b>
+  <%= @software.key %>
+</p>
+
+<p>
+  <b>Platform:</b>
+  <%= @software.platform %>
+</p>
+
+<p>
+  <b>Asset:</b>
+  <%= @software.asset.tag_with_name if !@software.asset.blank? %>
+</p>
+
+<p>
+  <b>Media Location:</b>
+  <%= @software.media_location %>
+</p>
+
+<p>
+  <b>Installed:</b>
+  <%= @software.installed %>
+</p>
+
+<p>
+  <b>Installed by:</b>
+  <%= @software.installed_by %>
+</p>
+
+<p>
+
+<p>
+  <b>Modified by:</b>
+  <%= @software.modified_by %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @software.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_software_path(@software) %> |
+<%= link_to 'Back', softwares_path %>

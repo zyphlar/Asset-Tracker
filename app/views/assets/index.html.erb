@@ -1,0 +1,51 @@
+<ul>
+  <li>
+    <a href="/assets/">Assets</a>
+  </li>
+  <li>
+    <a href="/softwares/">Softwares</a>
+  </li>
+  <li>
+    <a href="/users/logout/">Logout</a>
+  </li>
+</ul>
+<br />
+<%= link_to 'New asset', new_asset_path %>
+
+<h1>Listing assets</h1>
+
+<table class="assettable">
+  <tr>
+    <%= @sortable.header_link('tag', 'Tag') %>
+    <%= @sortable.header_link('name', 'Network Name') %>
+    <%= @sortable.header_link('make', 'Make') %>
+    <%= @sortable.header_link('make', 'Model') %>
+    <%= @sortable.header_link('serial', 'Serial') %>
+    <%= @sortable.header_link('category', 'Category') %>
+    <%= @sortable.header_link('warranty', 'Warranty Expires') %>
+    <%= @sortable.header_link('location', 'Location') %>
+    <%= @sortable.header_link('assigned', 'Assigned') %>
+    <%= @sortable.header_link('status', 'Status') %>
+    <%= @sortable.header_link('updated', 'Updated') %>
+  </tr>
+
+<% for asset in @assets %>
+  <tr class="<%= cycle('oddrow', 'evenrow') %>">
+    <td class="smallcolumntag"><%= asset.tag %></td>
+    <td class="smallcolumn"><%= asset.name %></td>
+    <td class="smallcolumn"><%= asset.make %></td>
+    <td class="smallcolumn"><%= asset.model %></td>
+    <td class="smallcolumn"><%= asset.serial %></td>
+    <td class="smallcolumn"><%= asset.category %></td>
+    <td class="smallcolumn"><%= asset.warranty %></td>
+    <td class="smallcolumn"><%= asset.location %></td>
+    <td class="smallcolumn"><%= asset.assigned %></td>
+    <td class="smallcolumn"><%= asset.status %></td>
+    <td class="smallcolumn"><%= asset.updated %></td>
+
+    <td class="sed"><%= link_to 'Show ', asset %></td>
+    <td class="sed"><%= link_to 'Edit ', edit_asset_path(asset) %></td>
+    <td class="sed"><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

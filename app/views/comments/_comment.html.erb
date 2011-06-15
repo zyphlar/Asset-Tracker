@@ -1,0 +1,8 @@
+<% div_for comment do %>
+  <h3>Posted <%= comment.created_at.to_s(:long) %> by <%= comment.commenter %></h3>
+  <p>
+    <%= h(comment.body) %>
+  </p>
+<% end %>
+
+

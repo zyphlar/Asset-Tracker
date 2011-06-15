@@ -1,0 +1,61 @@
+.assettable {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.sed {
+ width:  1%;
+ max-width: 1%;
+ padding: 1px;
+ border: none;
+}
+
+.importantcolumn {
+  width: 10em;
+  max-width: 10em;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+.mediumcolumn {
+  width: 7em;
+  max-width: 7em;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+.smallcolumn {
+  width: 5em;
+  max-width: 5em;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+.smallercolumn {
+  width: 3em;
+  max-width: 3em;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+.smallcolumntag {
+  width: 3em;
+  max-width: 3em;
+  overflow: hidden;
+  text-align: center;  
+}
+
+
+
+.evenrow {
+background-color: #cccccc;
+}
+
+.softwarecolumn {
+  border-left: 1px solid black;
+  overflow: hidden;
+}

@@ -1,0 +1,40 @@
+<%= render :partial => @asset %>
+
+<p>
+  <%= link_to 'Edit', edit_asset_path(@asset) %> |
+  <%= link_to 'Destroy', @asset, :method => :delete, :confirm => "Are you sure?" %> <br/>
+  <strong><%= link_to 'See All Assets', assets_path %></strong>
+</p>
+
+<h2>Softwares</h2>
+<div id="softwares"></div>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Version</th>
+    <th>Product Key</th>
+    <th>Platform</th>
+    <th>Media Location</th>
+    <th>Installed</th>
+    <th>Installed By</th>
+    <th>Modified By</th>
+    <th>Note</th>
+  </tr>
+<%= render :partial => @asset.softwares %>
+</table>
+
+<%= link_to 'New Software', new_software_path %>
+
+<h2>Comments</h2>
+<div id="comments">
+  <%= render :partial => @asset.comments.reverse %>
+
+  <% form_for [@asset, Comment.new] do |f| %>
+    <p>
+      <%= f.label :body, "New Comment" %><br />
+      <%= f.text_area :body, :class => "comment_body" %>
+    </p>
+    <p><%= f.submit "Add Comment" %></p>
+  <% end %>
+</div>
