@@ -8,3 +8,4 @@
 
 User.create(:name => 'Jason Katz',   :email => 'jason.katz@moonscoop.com',         :password => 'admin2')
 User.create(:name => 'Patrick Coy',  :email => 'patrick.coy@moonscoop.com',        :password => 'admin1')
+User.create(:name => 'Steve Rosen',  :email => 'steve.rosen@moonscoop.com',        :password => 'clam$ny')
