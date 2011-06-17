@@ -1,3 +1,5 @@
-warden
+rails --version 2.3.8
+pg
+warden --version 0.10.7
 devise --version 1.0.8
 paginate
